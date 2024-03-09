@@ -11,7 +11,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:8081/api/getStudents')
+        axios.get('https://student-tracker-application.onrender.com/api/getStudents')
             .then(res => {
                 setStudents(res.data.students);
             })

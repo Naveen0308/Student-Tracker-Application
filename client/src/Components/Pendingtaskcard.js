@@ -28,7 +28,7 @@ const Pendingtaskcard = ({ tasks, fetchData }) => {
   //     setShowModal(false);
   // };
   const handleCompletedTaskClick = async() => {
-    const response = await axios.post(`http://localhost:8081/api/update-task`, {taskId: tasks.id});
+    const response = await axios.post(`https://student-tracker-application.onrender.com/api/update-task`, {taskId: tasks.id});
 
     fetchData();
       

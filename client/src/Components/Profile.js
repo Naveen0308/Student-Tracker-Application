@@ -15,7 +15,7 @@ export default function User() {
     const {userId} = useContext(UserContext);
     //console.log(userId);
     useEffect(() => {
-        axios.get(`http://localhost:8081/api/getUser/${userId}`)
+        axios.get(`https://student-tracker-application.onrender.com/api/getUser/${userId}`)
         .then((res) => {
             console.log("user data frontend", res.data);
             setUserData(res.data.user);

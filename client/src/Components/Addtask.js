@@ -15,7 +15,7 @@ const AddTask = () => {
     useEffect(() => {
         const fetchUserNames = async () => {
             try {
-                const response = await axios.get('http://localhost:8081/api/user-names');
+                const response = await axios.get('https://student-tracker-application.onrender.com/api/user-names');
                 setUserNames(response.data.result);
             } catch (error) {
                 console.error('Error fetching user names:', error);
@@ -28,7 +28,7 @@ const AddTask = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8081/api/add-task', {
+            await axios.post('https://student-tracker-application.onrender.com/api/add-task', {
                 taskName,
                 taskDescription,
                 toolsUsed,
